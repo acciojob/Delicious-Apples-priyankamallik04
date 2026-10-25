@@ -1,1 +1,245 @@
-/* your code here */
+  /* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #00e676;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main Container Box */
+.product {
+    background-color: #ffffff;
+    width: 550px;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 30px;
+    margin-left: 50px; /* Gives room for the left offset card */
+    height: 440px;
+}
+
+/* Left Photo Section Overlap */
+.product__photo {
+    position: absolute;
+    left: -40px;
+    top: 28px;
+    bottom: -20px;
+    width: 300px;
+}
+
+.photo-container {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /*height: 100%;*/
+
+    height: 380px;
+}
+
+/* Main Image Box */
+.photo-main {
+    background: linear-gradient(135deg, #a8e063 0%, #8ef510 100%);
+    padding: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 310px;
+}
+
+.photo-main .controls {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    font-size: 14px;
+    z-index: 2;
+}
+
+.photo-main .controls i {
+    cursor: pointer;
+}
+
+.photo-main img {
+    width: 120%;
+    max-width: 280px;
+    position: absolute;
+    left: -25px;
+    top: 30px;
+    filter: drop-shadow(0 15px 12px rgba(0, 0, 0, 0.35));
+}
+
+/* Photo Album Thumbnails */
+.photo-album {
+    padding: 15px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-album ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.photo-album ul li {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 4px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    cursor: pointer;
+}
+
+.photo-album ul li img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Right Product Info Details */
+.product__info {
+    margin-left: 270px; /* Offset space for the floating left photo card */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #444444;
+    line-height: 1.2;
+}
+
+.title span {
+    font-size: 10px;
+    color: #aaaaaa;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Price Styling */
+.price {
+    color: #ff4757;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 15px 0 10px 0;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.price span {
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+/* Color Variant Options */
+.variant {
+    margin-bottom: 15px;
+}
+
+.variant h3, .description h3 {
+    font-size: 11px;
+    color: #888888;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.variant ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.variant ul li {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.variant ul li:first-child {
+    border: 1.5px solid #666666; /* Active border selection */
+}
+
+.variant ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Description & Benefits */
+.description ul {
+    list-style-type: disc;
+    padding-left: 16px;
+    margin-bottom: 20px;
+}
+
+.description ul li {
+    font-size: 11px;
+    color: #555555;
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+/* Add To Cart Button */
+.add-to-cart {
+    background-color: #ff4757;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(255, 71, 87, 0.4);
+    align-self: flex-start;
+    text-transform: uppercase;
+}
+
+
+
+.add-to-cart:hover {
+    background-color: #fa3243;
+}
